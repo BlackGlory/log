@@ -20,3 +20,9 @@ const value = (console.log('foo', 'bar'), 'bar')
 ```ts
 function log<T>(...data: [...any[], T]): T
 ```
+
+### time
+```ts
+function time<T>(message: string, fn: () => T): T
+function time<T>(message: string, fn: () => PromiseLike<T>): Promise<T>
+```
