@@ -1,4 +1,4 @@
-import { isPromiseLike } from 'extra-promise'
+import { isPromiseLike } from '@blackglory/types'
 
 export function time<T>(message: string, fn: () => T): T
 export function time<T>(message: string, fn: () => PromiseLike<T>): Promise<T>
