@@ -26,3 +26,19 @@ function log<T>(...data: [...any[], T]): T
 function time<T>(message: string, fn: () => T): T
 function time<T>(message: string, fn: () => PromiseLike<T>): Promise<T>
 ```
+
+### timeFunction
+```ts
+function timeFunction<Result, Args extends any[]>(
+  message: string
+, fn: (...args: Args) => Result
+): (...args: Args) => Result
+```
+
+### timeAsyncFunction
+```ts
+function timeAsyncFunction<Result, Args extends any[]>(
+  message: string
+, fn: (...args: Args) => PromiseLike<Result>
+): (...args: Args) => Promise<Result>
+```

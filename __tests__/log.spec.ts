@@ -2,6 +2,8 @@ import { log } from '@src/log'
 
 const logSpy = jest.spyOn(console, 'log').mockImplementation()
 
+afterEach(() => logSpy.mockClear())
+
 test('log', () => {
   const result = log('foo', 'bar')
 

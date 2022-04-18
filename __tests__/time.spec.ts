@@ -4,6 +4,8 @@ import { delay } from 'extra-promise'
 const TIME_ERROR = 1
 const logSpy = jest.spyOn(console, 'log').mockImplementation()
 
+afterEach(() => logSpy.mockClear())
+
 describe('time', () => {
   test('sync ', () => {
     const result = time('foo', () => 'bar')
