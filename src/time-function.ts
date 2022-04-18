@@ -6,7 +6,7 @@ export function timeFunction<Result, Args extends any[]>(
     const startTime = Date.now()
     const result = fn(...args)
     const endTime = Date.now()
-    console.log(message, `${startTime - endTime}ms`)
+    console.log(message, `${endTime - startTime}ms`)
     return result
   }
 }

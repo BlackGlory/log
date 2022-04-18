@@ -15,7 +15,7 @@ test('timeAsyncFunction', async () => {
   const result = await fn('bar') 
   const endTime = Date.now()
 
-  expect(logSpy).toBeCalledWith('foo', expect.stringMatching(/\d+ms/))
+  expect(logSpy).toBeCalledWith('foo', expect.stringMatching(/^\d+ms$/))
   expect(result).toBe('bar')
   expect(endTime - startTime).toBeGreaterThanOrEqual(1000 - TIME_ERROR)
 })
