@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/BlackGlory/log/compare/v1.1.1...v1.2.0) (2022-04-19)
+
+
+### Features
+
+* improve timestmap resolution ([4070bc7](https://github.com/BlackGlory/log/commit/4070bc7eebc23becffadb80c465cc319b23c771a))
+
 ### [1.1.1](https://github.com/BlackGlory/log/compare/v1.1.0...v1.1.1) (2022-04-18)
 
 
