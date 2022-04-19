@@ -10,7 +10,7 @@ describe('time', () => {
   test('sync ', () => {
     const result = time('foo', () => 'bar')
 
-    expect(logSpy).toBeCalledWith('foo', expect.stringMatching(/^\d+ms$/))
+    expect(logSpy).toBeCalledWith('foo', expect.stringMatching(/^\d+(?:\.\d+)?ms$/))
     expect(result).toBe('bar')
   })
 
@@ -22,7 +22,7 @@ describe('time', () => {
     })
     const endTime = Date.now()
 
-    expect(logSpy).toBeCalledWith('foo', expect.stringMatching(/^\d+ms$/))
+    expect(logSpy).toBeCalledWith('foo', expect.stringMatching(/^\d+(?:\.\d+)?ms$/))
     expect(result).toBe('bar')
     expect(endTime - startTime).toBeGreaterThanOrEqual(1000 - TIME_ERROR)
   })

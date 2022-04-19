@@ -8,6 +8,6 @@ test('timeFunction', () => {
   const fn = timeFunction('foo', (text: string) => text)
   const result = fn('bar')
 
-  expect(logSpy).toBeCalledWith('foo', expect.stringMatching(/^\d+ms$/))
+  expect(logSpy).toBeCalledWith('foo', expect.stringMatching(/^\d+(?:\.\d+)?ms$/))
   expect(result).toBe('bar')
 })

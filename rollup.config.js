@@ -4,6 +4,7 @@ import resolve from '@rollup/plugin-node-resolve'
 import json from '@rollup/plugin-json'
 import { terser } from 'rollup-plugin-terser'
 import analyze from 'rollup-plugin-analyzer'
+import alias from '@rollup/plugin-alias'
 import replace from '@rollup/plugin-replace'
 
 const UMD_NAME = 'Log'
@@ -21,7 +22,12 @@ export default [
 
 function createOptions({ directory, target }) {
   const commonPlugins = [
-    replace({
+    alias({
+      entries: [
+        { find: '@utils/high-resolution-timestamp', replacement: '@utils/high-resolution-timestamp.browser' }
+      ]
+    })
+  , replace({
       'Object.defineProperty(exports, "__esModule", { value: true });': ''
     , delimiters: ['\n', '\n']
     })
