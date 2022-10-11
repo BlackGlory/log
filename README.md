@@ -42,3 +42,9 @@ function timeAsyncFunction<Result, Args extends any[]>(
 , fn: (...args: Args) => PromiseLike<Result>
 ): (...args: Args) => Promise<Result>
 ```
+
+### group
+```ts
+function group<T>(label: string, fn: () => T): T
+function group<T>(fn: () => T): T
+```
