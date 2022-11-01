@@ -9,6 +9,10 @@
   ],
   "main": "lib/es2018/index.js",
   "types": "lib/es2018/index.d.ts",
+  "browser": {
+    "./lib/es2015/utils/high-resolution-timestamp.js": "./lib/es2015/utils/high-resolution-timestamp.browser.js",
+    "./lib/es2018/utils/high-resolution-timestamp.js": "./lib/es2018/utils/high-resolution-timestamp.browser.js"
+  },
   "sideEffects": false,
   "repository": "git@github.com:BlackGlory/log.git",
   "author": "BlackGlory <woshenmedoubuzhidao@blackglory.me>",
