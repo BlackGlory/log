@@ -1,4 +1,5 @@
-import { now, elapsed } from '@utils/high-resolution-timestamp'
+import { now } from '@utils/high-resolution-timestamp'
+import { getElapsedTime } from '@utils/get-elapsed-time'
 
 export function timeFunction<Result, Args extends any[]>(
   message: string
@@ -8,7 +9,7 @@ export function timeFunction<Result, Args extends any[]>(
     const startTime = now()
     const result = fn(...args)
     const endTime = now()
-    console.log(message, elapsed(startTime, endTime))
+    console.log(message, getElapsedTime(startTime, endTime))
     return result
   }
 }
