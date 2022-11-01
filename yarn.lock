@@ -2755,6 +2755,11 @@ extglob@^2.0.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
+extra-compatible@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/extra-compatible/-/extra-compatible-0.1.0.tgz#32ff4841bb046aafcfb472a28be3365561ebc464"
+  integrity sha512-6D9Giorv0h3P//e0c1IPsSlYzyEAGOLP6ElC0MFyL9oBUstfYZWrYhiwc02pO86mk+Xr/hui4S7kv6U4vwpeJg==
+
 extra-fsm@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/extra-fsm/-/extra-fsm-0.1.1.tgz#01ec99f1fd61158626633898edbd55384b329740"

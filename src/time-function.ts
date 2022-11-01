@@ -1,4 +1,4 @@
-import { now } from '@utils/high-resolution-timestamp'
+import { performanceNow } from 'extra-compatible'
 import { getElapsedTime } from '@utils/get-elapsed-time'
 
 export function timeFunction<Result, Args extends any[]>(
@@ -6,9 +6,9 @@ export function timeFunction<Result, Args extends any[]>(
 , fn: (...args: Args) => Result
 ): (...args: Args) => Result {
   return function (...args: Args): Result {
-    const startTime = now()
+    const startTime = performanceNow()
     const result = fn(...args)
-    const endTime = now()
+    const endTime = performanceNow()
     console.log(message, getElapsedTime(startTime, endTime))
     return result
   }

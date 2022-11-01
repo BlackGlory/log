@@ -1,4 +1,4 @@
-import { now } from '@utils/high-resolution-timestamp'
+import { performanceNow } from 'extra-compatible'
 import { getElapsedTime } from '@utils/get-elapsed-time'
 
 export function timeAsyncFunction<Result, Args extends any[]>(
@@ -6,9 +6,9 @@ export function timeAsyncFunction<Result, Args extends any[]>(
 , fn: (...args: Args) => PromiseLike<Result>
 ): (...args: Args) => Promise<Result> {
   return async function (...args: Args): Promise<Result> {
-    const startTime = now()
+    const startTime = performanceNow()
     const result = await fn(...args)
-    const endTime = now()
+    const endTime = performanceNow()
     console.log(message, getElapsedTime(startTime, endTime))
     return result
   }
