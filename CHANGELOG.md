@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/BlackGlory/log/compare/v1.3.4...v2.0.0) (2023-01-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* - CommonJS => ESM.
+- The minimal version of Node.js is 16.
+
+* commonjs => esm ([73c71ce](https://github.com/BlackGlory/log/commit/73c71ce46a9f71a314f32f8121a9ead85d859264))
+
 ### [1.3.4](https://github.com/BlackGlory/log/compare/v1.3.3...v1.3.4) (2023-01-27)
 
 ### [1.3.3](https://github.com/BlackGlory/log/compare/v1.3.2...v1.3.3) (2022-11-01)
