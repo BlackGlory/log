@@ -1,5 +1,5 @@
 import { go } from '@blackglory/go'
-import { isUndefined } from '@blackglory/types'
+import { isUndefined } from 'extra-utils'
 
 export function group<T>(label: string, fn: () => T): T
 export function group<T>(fn: () => T): T

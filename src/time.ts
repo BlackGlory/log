@@ -1,6 +1,6 @@
 import { performanceNow } from 'extra-compatible'
 import { getElapsedTime } from '@utils/get-elapsed-time'
-import { isPromiseLike } from '@blackglory/types'
+import { isPromiseLike } from 'extra-promise'
 
 export function time<T>(message: string, fn: () => T): T
 export function time<T>(message: string, fn: () => PromiseLike<T>): Promise<T>
