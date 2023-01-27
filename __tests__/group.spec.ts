@@ -1,7 +1,9 @@
-import { group } from '@src/group'
+import { group } from '@src/group.js'
+import { jest } from '@jest/globals'
+import { pass } from '@blackglory/pass'
 
-const groupSpy = jest.spyOn(console, 'group').mockImplementation()
-const groupEndSpy = jest.spyOn(console, 'groupEnd').mockImplementation()
+const groupSpy = jest.spyOn(console, 'group').mockImplementation(pass)
+const groupEndSpy = jest.spyOn(console, 'groupEnd').mockImplementation(pass)
 
 afterEach(() => {
   groupSpy.mockClear()

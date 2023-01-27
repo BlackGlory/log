@@ -1,8 +1,10 @@
-import { timeAsyncFunction } from '@src/time-async-function'
+import { timeAsyncFunction } from '@src/time-async-function.js'
 import { delay } from 'extra-promise'
+import { jest } from '@jest/globals'
+import { pass } from '@blackglory/pass'
 
 const TIME_ERROR = 1
-const logSpy = jest.spyOn(console, 'log').mockImplementation()
+const logSpy = jest.spyOn(console, 'log').mockImplementation(pass)
 
 afterEach(() => logSpy.mockClear())
 

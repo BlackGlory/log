@@ -1,5 +1,5 @@
 import { performanceNow } from 'extra-compatible'
-import { getElapsedTime } from '@utils/get-elapsed-time'
+import { getElapsedTime } from '@utils/get-elapsed-time.js'
 import { isPromiseLike } from 'extra-promise'
 
 export function time<T>(message: string, fn: () => T): T

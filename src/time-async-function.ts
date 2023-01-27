@@ -1,5 +1,5 @@
 import { performanceNow } from 'extra-compatible'
-import { getElapsedTime } from '@utils/get-elapsed-time'
+import { getElapsedTime } from '@utils/get-elapsed-time.js'
 
 export function timeAsyncFunction<Result, Args extends any[]>(
   message: string

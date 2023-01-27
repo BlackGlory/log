@@ -1,6 +1,8 @@
-import { log } from '@src/log'
+import { log } from '@src/log.js'
+import { jest } from '@jest/globals'
+import { pass } from '@blackglory/pass'
 
-const logSpy = jest.spyOn(console, 'log').mockImplementation()
+const logSpy = jest.spyOn(console, 'log').mockImplementation(pass)
 
 afterEach(() => logSpy.mockClear())
 
