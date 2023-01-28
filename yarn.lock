@@ -542,19 +542,19 @@
     iterable-operator "^3.1.1"
     justypes "^4.1.0"
 
-"@blackglory/prelude@^0.2.3":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@blackglory/prelude/-/prelude-0.2.3.tgz#60d38bf0ea28cce3975c4d87777880fa25e7dc79"
-  integrity sha512-v7UcSnvHS2jT+/2ERF091sGmWXu89/VvAfnS6aP7xkqGAHSK67QA70R+rOkr8YVpbtVW/61o5+ZT0w+/ntjHMA==
+"@blackglory/prelude@^0.2.4":
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/@blackglory/prelude/-/prelude-0.2.4.tgz#c938cf04f0e10e19b5a429fd8e9c67d8ed668271"
+  integrity sha512-oURwBLnPSVL6UbKXc1Vtb2XUnePj2gG52/743D2swpPtSWEWT2s+HDvJpz3jy42KjyqrUaefTElIoWvnaJZxmQ==
   dependencies:
     "@blackglory/errors" "^2.4.3"
     "@blackglory/go" "^1.1.2"
     "@blackglory/log" "^1.3.3"
     "@blackglory/pass" "^1.1.0"
     extra-lazy "^1.3.1"
-    extra-promise "^4.4.0 || ^5.0.1"
+    extra-promise "^4.4.0"
     extra-utils "^4.0.0"
-    iterable-operator "^2.5.0 || ^3.0.0"
+    iterable-operator "^2.5.0"
     justypes "^4.1.0"
 
 "@blackglory/structures@^0.11.4":
@@ -2629,13 +2629,13 @@ extra-compatible@^0.1.0:
     "@blackglory/prelude" "^0.2.2"
     iterable-operator "^3.1.1"
 
-extra-compatible@^0.1.7:
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/extra-compatible/-/extra-compatible-0.1.7.tgz#99a2835223ef1d888df3800a08e76d3322107e80"
-  integrity sha512-mJeh4fxbjyJ78nOoDHtac5SrmPW/yLbNEDW6ZVzqZXovCclb4jhLotlMGoObpBM6XhS+S64Oiv1Fkpbx8OAqig==
+extra-compatible@^0.1.8:
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/extra-compatible/-/extra-compatible-0.1.8.tgz#8568d222a4090a6da1a9c106cc4613d7fe141eae"
+  integrity sha512-0jIU+9KKc7KEvqDRu7SDTnPI2s50k1ms5uR8LSDL5jGlWr51L4H0xhrvja31yv0d5Riu8E6ZKRGIzzZx8QM/Mg==
   dependencies:
-    "@blackglory/prelude" "^0.2.3"
-    iterable-operator "^2.1.0 || ^3.0.0"
+    "@blackglory/prelude" "^0.2.4"
+    iterable-operator "^2.1.0"
 
 extra-fsm@^0.1.1:
   version "0.1.1"
@@ -3637,7 +3637,18 @@ istanbul-reports@^3.1.3:
     html-escaper "^2.0.0"
     istanbul-lib-report "^3.0.0"
 
-"iterable-operator@^2.1.0 || ^3.0.0", "iterable-operator@^2.5.0 || ^3.0.0", iterable-operator@^3.1.1:
+iterable-operator@^2.1.0, iterable-operator@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/iterable-operator/-/iterable-operator-2.5.0.tgz#b0221a85973900ef1b76dd5b83f3c4d9cab0162c"
+  integrity sha512-FxN4lVKtQqz3p4o8MhSVkCBS6PjBgqvJBeWxNCx9xiWLQgtlwV7qOK4aE3eZot+79JVCP55OmrycKdSj+YWj1A==
+  dependencies:
+    "@blackglory/errors" "^2.3.0"
+    "@blackglory/go" "^1.1.2"
+    "@blackglory/types" "^1.4.0"
+    extra-utils "^3.3.0"
+    justypes "^3.0.0"
+
+iterable-operator@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/iterable-operator/-/iterable-operator-3.1.1.tgz#1e31cef83ab5e959538538ceb07019d22aa50c4e"
   integrity sha512-XZX7M/k9cTMsX5lW0qcGJBDG5/Jj+We8KRfXk6sLbg4c/PhlN66GbNR7BIUNC0lUADPsC43MOgp7bzHybSxfNA==
@@ -3649,17 +3660,6 @@ istanbul-reports@^3.1.3:
     extra-promise "^5.0.0"
     extra-utils "^4.0.0"
     justypes "^4.1.0"
-
-iterable-operator@^2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/iterable-operator/-/iterable-operator-2.5.0.tgz#b0221a85973900ef1b76dd5b83f3c4d9cab0162c"
-  integrity sha512-FxN4lVKtQqz3p4o8MhSVkCBS6PjBgqvJBeWxNCx9xiWLQgtlwV7qOK4aE3eZot+79JVCP55OmrycKdSj+YWj1A==
-  dependencies:
-    "@blackglory/errors" "^2.3.0"
-    "@blackglory/go" "^1.1.2"
-    "@blackglory/types" "^1.4.0"
-    extra-utils "^3.3.0"
-    justypes "^3.0.0"
 
 jest-changed-files@^27.5.1:
   version "27.5.1"
