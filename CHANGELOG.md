@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.5](https://github.com/BlackGlory/log/compare/v1.3.4...v1.3.5) (2023-01-28)
+
+
+### Bug Fixes
+
+* dependencies ([24ee923](https://github.com/BlackGlory/log/commit/24ee923245697095a57f399c6c9bed1a9e9cf06a))
+* dependencies ([efee6ad](https://github.com/BlackGlory/log/commit/efee6adf66b42ff39f80ffe767cea187b79a68a4))
+
 ### [1.3.4](https://github.com/BlackGlory/log/compare/v1.3.3...v1.3.4) (2023-01-27)
 
 ### [1.3.3](https://github.com/BlackGlory/log/compare/v1.3.2...v1.3.3) (2022-11-01)
