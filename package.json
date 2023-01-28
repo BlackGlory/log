@@ -48,8 +48,8 @@
   },
   "dependencies": {
     "@blackglory/go": "^1.1.2",
-    "extra-compatible": "^0.1.0",
-    "extra-promise": "5",
-    "extra-utils": "4"
+    "extra-compatible": "^0.1.7",
+    "extra-promise": "^4.4.0",
+    "extra-utils": "^4.0.1"
   }
 }
