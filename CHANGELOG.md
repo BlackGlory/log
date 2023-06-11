@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.2](https://github.com/BlackGlory/log/compare/v2.0.1...v2.0.2) (2023-06-11)
+
+
+### Bug Fixes
+
+* export src ([1c4922b](https://github.com/BlackGlory/log/commit/1c4922bf32cb1992e5a283a79889088a181d703f))
+
 ### [2.0.1](https://github.com/BlackGlory/log/compare/v2.0.0...v2.0.1) (2023-03-18)
 
 ## [2.0.0](https://github.com/BlackGlory/log/compare/v1.3.4...v2.0.0) (2023-01-27)
