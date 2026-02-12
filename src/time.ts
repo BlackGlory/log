@@ -1,5 +1,5 @@
 import { performanceNow } from 'extra-compatible'
-import { getElapsedTime } from '@utils/get-elapsed-time.js'
+import { getElapsedTimeString } from '@utils/get-elapsed-time-string.js'
 import { isPromiseLike } from 'extra-promise'
 
 export function time<T>(message: string, fn: () => T): T
@@ -10,12 +10,12 @@ export function time<T>(message: string, fn: () => T | PromiseLike<T>) {
   if (isPromiseLike(result)) {
     return result.then(() => {
       const endTime = performanceNow()
-      console.log(message, getElapsedTime(startTime, endTime))
+      console.log(message, getElapsedTimeString(startTime, endTime))
       return result
     })
   } else {
     const endTime = performanceNow()
-    console.log(message, getElapsedTime(startTime, endTime))
+    console.log(message, getElapsedTimeString(startTime, endTime))
     return result
   }
 }

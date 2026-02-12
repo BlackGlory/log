@@ -1,5 +1,5 @@
 import { performanceNow } from 'extra-compatible'
-import { getElapsedTime } from '@utils/get-elapsed-time.js'
+import { getElapsedTimeString } from '@utils/get-elapsed-time-string.js'
 
 export function timeAsyncFunction<Result, Args extends any[]>(
   message: string
@@ -9,7 +9,7 @@ export function timeAsyncFunction<Result, Args extends any[]>(
     const startTime = performanceNow()
     const result = await fn(...args)
     const endTime = performanceNow()
-    console.log(message, getElapsedTime(startTime, endTime))
+    console.log(message, getElapsedTimeString(startTime, endTime))
     return result
   }
 }
