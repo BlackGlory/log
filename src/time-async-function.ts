@@ -9,7 +9,9 @@ export function timeAsyncFunction<Result, Args extends any[]>(
     const startTime = performanceNow()
     const result = await fn(...args)
     const endTime = performanceNow()
+
     console.log(message, getElapsedTimeString(startTime, endTime))
+
     return result
   }
 }
