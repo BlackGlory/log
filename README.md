@@ -45,6 +45,8 @@ function timeAsyncFunction<Result, Args extends any[]>(
 
 ### group
 ```ts
-function group<T>(label: string, fn: () => T): T
-function group<T>(fn: () => T): T
+export function group<T>(label: string, fn: () => T): T
+export function group<T>(label: string, fn: () => PromiseLike<T>): Promise<T>
+export function group<T>(fn: () => T): T
+export function group<T>(fn: () => PromiseLike<T>): Promise<T>
 ```

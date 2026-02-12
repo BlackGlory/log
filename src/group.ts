@@ -1,13 +1,17 @@
 import { go } from '@blackglory/go'
+import { isPromiseLike } from 'extra-promise'
 import { isUndefined } from 'extra-utils'
+import { Awaitable } from 'justypes'
 
+export function group<T>(label: string, fn: () => PromiseLike<T>): Promise<T>
 export function group<T>(label: string, fn: () => T): T
+export function group<T>(fn: () => PromiseLike<T>): Promise<T>
 export function group<T>(fn: () => T): T
 export function group<T>(...args:
-| [label: string, fn: () => T]
-| [fn: () => T]
-): T {
-  const [label, fn]: [string | undefined, () => T] = go(() => {
+| [label: string, fn: () => Awaitable<T>]
+| [fn: () => Awaitable<T>]
+): Awaitable<T> {
+  const [label, fn]: [string | undefined, () => Awaitable<T>] = go(() => {
     if (args.length === 1) {
       const [fn] = args
 
@@ -25,8 +29,25 @@ export function group<T>(...args:
   } else {
     console.group(label)
   }
-  const result = fn()
-  console.groupEnd()
 
-  return result
+  try {
+    const result = fn()
+    if (isPromiseLike(result)) {
+      return go(async () => {
+        try {
+          return await result
+        } finally {
+          console.groupEnd()
+        }
+      })
+    } else {
+      console.groupEnd()
+
+      return result
+    }
+  } catch (e) {
+    console.groupEnd()
+
+    throw e
+  }
 }

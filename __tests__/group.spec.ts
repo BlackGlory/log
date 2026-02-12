@@ -11,31 +11,51 @@ afterEach(() => {
 })
 
 describe('group', () => {
-  test('without label', () => {
-    const fn = jest.fn()
+  describe('fn', () => {
+    test('sync', () => {
+      const fn = jest.fn(() => 'foo')
 
-    group(fn)
+      const result = group(fn)
 
-    expect(groupSpy).toBeCalledTimes(1)
-    expect(fn).toBeCalledTimes(1)
-    expect(groupEndSpy).toBeCalledTimes(1)
-    expect(groupSpy).toBeCalledWith()
+      expect(result).toBe('foo')
+      expect(groupSpy).toBeCalledTimes(1)
+      expect(fn).toBeCalledTimes(1)
+      expect(groupEndSpy).toBeCalledTimes(1)
+    })
+
+    test('async', async () => {
+      const fn = jest.fn(async () => 'foo')
+
+      const promise = group(fn)
+      const groupEndSpyCalls1 = groupEndSpy.mock.calls.length
+      const result = await promise
+      const groupEndSpyCalls2 = groupEndSpy.mock.calls.length
+
+      expect(result).toBe('foo')
+      expect(groupSpy).toBeCalledTimes(1)
+      expect(fn).toBeCalledTimes(1)
+      expect(groupEndSpyCalls1).toBe(0)
+      expect(groupEndSpyCalls2).toBe(1)
+    })
   })
 
-  test('with label', () => {
-    const fn = jest.fn()
+  describe('label', () => {
+    test('without label', () => {
+      const fn = jest.fn(() => 'foo')
 
-    group('label', fn)
+      const result = group(fn)
 
-    expect(groupSpy).toBeCalledTimes(1)
-    expect(fn).toBeCalledTimes(1)
-    expect(groupEndSpy).toBeCalledTimes(1)
-    expect(groupSpy).toBeCalledWith('label')
-  })
+      expect(result).toBe('foo')
+      expect(groupSpy).toBeCalledWith()
+    })
 
-  test('result', () => {
-    const result = group(() => true)
+    test('with label', () => {
+      const fn = jest.fn(() => 'foo')
 
-    expect(result).toBe(true)
+      const result = group('label', fn)
+
+      expect(result).toBe('foo')
+      expect(groupSpy).toBeCalledWith('label')
+    })
   })
 })

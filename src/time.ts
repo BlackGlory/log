@@ -2,10 +2,11 @@ import { performanceNow } from 'extra-compatible'
 import { getElapsedTimeString } from '@utils/get-elapsed-time-string.js'
 import { isPromiseLike } from 'extra-promise'
 import { go } from '@blackglory/go'
+import { Awaitable } from 'justypes'
 
 export function time<T>(message: string, fn: () => PromiseLike<T>): Promise<T>
 export function time<T>(message: string, fn: () => T): T
-export function time<T>(message: string, fn: () => T | PromiseLike<T>) {
+export function time<T>(message: string, fn: () => Awaitable<T>) {
   const startTime = performanceNow()
   const result = fn()
   if (isPromiseLike(result)) {
