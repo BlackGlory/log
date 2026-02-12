@@ -1,4 +1,7 @@
-export function log<T>(...data: [...any[], T]): T {
-  console.log(...data)
-  return data[data.length - 1]
+import { last } from 'extra-utils'
+
+export function log<T>(...params: [...unknown[], T]): T {
+  console.log(...params)
+
+  return last(params) as T
 }

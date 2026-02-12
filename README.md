@@ -18,7 +18,7 @@ const value = (console.log('foo', 'bar'), 'bar')
 ## API
 ### log
 ```ts
-function log<T>(...data: [...any[], T]): T
+function log<T>(...params: [...unknown[], T]): T
 ```
 
 ### time

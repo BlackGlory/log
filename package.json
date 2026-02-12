@@ -59,6 +59,6 @@
     "@blackglory/go": "^1.1.2",
     "extra-compatible": "^0.2.0",
     "extra-promise": "^6.0.4",
-    "extra-utils": "^5.1.0"
+    "extra-utils": "^5.20.0"
   }
 }
