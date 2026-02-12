@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/BlackGlory/log/compare/v2.0.2...v2.1.0) (2026-02-12)
+
+
+### Features
+
+* **group:** add support for async functions ([976016e](https://github.com/BlackGlory/log/commit/976016e13ab55c9f01b6e630be77f48b7faa0ae5))
+* **time:** improve function overloading ([4011809](https://github.com/BlackGlory/log/commit/4011809cc83449ad8f0f15b027ea3eebdb85af23))
+
 ### [2.0.2](https://github.com/BlackGlory/log/compare/v2.0.1...v2.0.2) (2023-06-11)
 
 
